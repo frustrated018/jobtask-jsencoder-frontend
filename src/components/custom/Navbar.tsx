@@ -1,7 +1,14 @@
-import React from "react";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import { Button, buttonVariants } from "../ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const Navbar = () => {
   return (
@@ -98,9 +105,95 @@ const Navbar = () => {
             {/* //! Smaller Devices */}
 
             <div className="block md:hidden">
-              <Button size={"icon"}>
-                <Menu />
-              </Button>
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button size={"icon"} variant={"ghost"}>
+                    <Menu />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent>
+                  <div className="pt-8">
+                    <nav aria-label="Global">
+                      <ul className="flex flex-col items-center gap-6 text-sm xl:text-base">
+                        <li>
+                          <SheetTrigger asChild>
+                            <a
+                              className="text-muted-foreground hover:text-primary hover:underline underline-offset-2"
+                              href="#"
+                            >
+                              Rooms
+                            </a>
+                          </SheetTrigger>
+                        </li>
+
+                        <li>
+                          <SheetTrigger asChild>
+                            <a
+                              className="text-muted-foreground hover:text-primary hover:underline underline-offset-2"
+                              href="#"
+                            >
+                              Checkout
+                            </a>
+                          </SheetTrigger>
+                        </li>
+
+                        <li>
+                          <SheetTrigger asChild>
+                            <a
+                              className="text-muted-foreground hover:text-primary hover:underline underline-offset-2"
+                              href="#"
+                            >
+                              About
+                            </a>
+                          </SheetTrigger>
+                        </li>
+
+                        <li>
+                          <SheetTrigger asChild>
+                            <a
+                              className="text-muted-foreground hover:text-primary hover:underline underline-offset-2"
+                              href="#"
+                            >
+                              Career
+                            </a>
+                          </SheetTrigger>
+                        </li>
+
+                        <li>
+                          <SheetTrigger asChild>
+                            <a
+                              className="text-muted-foreground hover:text-primary hover:underline underline-offset-2"
+                              href="#"
+                            >
+                              Contact
+                            </a>
+                          </SheetTrigger>
+                        </li>
+                        <li>
+                          <SheetTrigger asChild>
+                            <a
+                              className="text-muted-foreground hover:text-primary hover:underline underline-offset-2"
+                              href="#"
+                            >
+                              Register
+                            </a>
+                          </SheetTrigger>
+                        </li>
+                        <li>
+                          <SheetTrigger asChild>
+                            <a
+                              className="text-muted-foreground hover:text-primary hover:underline underline-offset-2"
+                              href="#"
+                            >
+                              Login
+                            </a>
+                          </SheetTrigger>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
         </div>
